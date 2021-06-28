@@ -245,9 +245,9 @@ def tune_eval(mod, params, dataset, batch_fn, tuning_opt, target='cuda', ctx=tvm
  
         ######################################################################
         # Time evaluator
-        # e = m.module.time_evaluator("run", ctx, repeat=3)
-        # t = np.array(e().results)*1000
-        # print("time_evaluator: %.3fms (%.5fms)"%(t.mean(), t.std()))
+        e = m.module.time_evaluator("run", ctx, repeat=3)
+        t = np.array(e().results)*1000
+        print("time_evaluator: %.3fms (%.5fms)"%(t.mean(), t.std()))
         ######################################################################
 
         # setup evaluaiton metric
