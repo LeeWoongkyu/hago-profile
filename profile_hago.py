@@ -49,7 +49,7 @@ parser.add_argument('--debug', '-d',  required=False, default=False, help='use d
 args = parser.parse_args()
 
 #### TUNING OPTION ####
-network = "resnet-18"
+network = "resnet-50"
 log_file = "%s-%s.log" % (network, args.dtype)
 dtype = "float32"
 
@@ -359,8 +359,8 @@ if __name__ == "__main__":
 
     results = []
     configs = [
-        Config('resnet18_v1', expected_acc=0.69),
-        # Config('resnet50_v1', expected_acc=0.75),
+        # Config('resnet18_v1', expected_acc=0.69),
+        Config('resnet50_v1', expected_acc=0.75),
         # Config('inceptionv3', expected_acc=0.76),
         # Config('mobilenet1.0', expected_acc=0.70)
     ]
