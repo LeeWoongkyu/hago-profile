@@ -46,7 +46,7 @@ parser.add_argument('--debug', '-d',  required=False, default=False, help='use d
 args = parser.parse_args()
 
 #### TUNING OPTION ####
-network = "resnet-18"
+network = "resnet-db-50"
 log_file = "%s-%s.log" % (network, args.dtype)
 dtype = "float32"
 
@@ -342,13 +342,13 @@ def test_quantize_acc(cfg, rec_val):
 
 if __name__ == "__main__":
     #TODO(for user): replace the line with the path to imagenet validation dataset
-    rec_val = "/home/ubuntu/imagenet/val.rec"
+    rec_val = "~/imagenet/val.rec"
     # rec_val = "~/tensorflow_datasets/downloads/manual/imagenet2012/val_rec.rec"
 
     results = []
     configs = [
-        Config('resnet18_v1', expected_acc=0.69),
-        # Config('resnet50_v1', expected_acc=0.75),
+        # Config('resnet18_v1', expected_acc=0.69),
+        Config('resnet50_v1', expected_acc=0.75),
         # Config('inceptionv3', expected_acc=0.76),
         # Config('mobilenet1.0', expected_acc=0.70)
     ]
