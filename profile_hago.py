@@ -49,7 +49,7 @@ parser.add_argument('--debug', '-d',  required=False, default=False, help='use d
 args = parser.parse_args()
 
 #### TUNING OPTION ####
-network = "resnet-50"
+network = "resnet-db-50"
 log_file = "%s-%s.log" % (network, args.dtype)
 dtype = "float32"
 
