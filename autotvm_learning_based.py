@@ -342,7 +342,7 @@ def test_quantize_acc(cfg, rec_val):
 
 if __name__ == "__main__":
     #TODO(for user): replace the line with the path to imagenet validation dataset
-    rec_val = "/home/ubuntu/imagenet/val.rec"
+    rec_val = "./val.rec"
     # rec_val = "~/tensorflow_datasets/downloads/manual/imagenet2012/val_rec.rec"
 
     results = []
